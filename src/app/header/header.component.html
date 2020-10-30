@@ -1,0 +1,108 @@
+<main>
+    <section id="description">
+        <h1> Learn to code by watching others</h1>
+    <p> See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+    but understanding how developers think is invaluable. </p>
+    </section>
+    <section id="form-con">
+        <p id="heading">Try it free 7 days then $20/mo. thereafter</p>
+        <form class="form" name="form" #f="ngForm"
+        (ngSubmit)="f.form.valid && getFormData()" >
+            <div class="input_contain form-group ng-invalid.ng-touched" > 
+                <input 
+                id="first_name"
+                 type="text" 
+                 class="form-control validate"
+                 
+                 [(ngModel)]= "model.firstname"
+                 name="firstname"
+                 #firstname="ngModel"
+                 placeholder="First Name"
+                 required
+                 >
+                 
+                 <span  *ngIf="f.submitted && firstname.invalid "  class="error">
+                     
+                    <span *ngIf="firstname.errors.required">
+                        <i class="fa fa-exclamation-circle"></i>
+                       <span class="errorMessage">First name cannot be empty</span> 
+                    </span>
+                 </span>
+            </div>
+            <div class="input_contain ng-invalid.ng-touched">
+                <input 
+           id="last_name"
+            type="text" 
+            class="form-control"
+            class="validate"
+            [(ngModel)]= "model.lastname"
+            name="lastname"
+            placeholder="Last Name"
+            #lastname="ngModel"
+            required>
+            <span  *ngIf="f.submitted && lastname.invalid "  class="error">
+                <span *ngIf="lastname.errors.required">
+                    <i class="fa fa-exclamation-circle"></i>
+                    <span class="errorMessage"> Last name cannot be empty</span>
+
+                    </span>
+             </span>
+            </div>
+
+            <div class="input_contain ng-invalid.ng-touched">
+                <input 
+           id="email"
+            type="email" 
+            class="validate"
+            [(ngModel)]= "model.email"
+            name="email"
+            placeholder="Email Address"
+            #email="ngModel"
+            email
+            required>
+            <span  *ngIf="f.submitted && email.invalid "  class="error">
+                <span *ngIf="email.errors.required">
+                    <i class="fa fa-exclamation-circle"></i>
+                    <span *ngIf="email.errors.email">Looks Like this is not an email</span>
+                  
+                </span>
+             </span>
+           
+            </div>
+
+            <div class="input_contain ng-invalid.ng-touched">
+                <input 
+           id="password"
+            type="password" 
+            class="validate"
+            [(ngModel)]= "model.password"
+            name="password"
+            placeholder="Password"
+            #password="ngModel"
+            required>
+            <span  *ngIf="f.submitted && password.invalid "  class="error">
+                <span *ngIf="password.errors.required">
+                    <i class="fa fa-exclamation-circle"></i>
+                    <span class="errorMessage">Password cannot be empty</span> 
+                </span>
+             </span>
+
+            </div>
+
+            <div>
+                <button>CLAIM YOUR FREE TRAIL</button>
+    
+            </div>
+            <div>
+                <span style="color: black; font-size: small;opacity: 0.4;">
+                    By clicking the button, you are agreeing to our <span style="color: red; font-weight: bold;"> Terms and Services</span>
+                </span>
+            </div>
+           
+              
+
+
+        </form>
+    </section>
+    
+</main>

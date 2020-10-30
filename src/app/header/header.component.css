@@ -1,0 +1,144 @@
+main{
+    width:80%;
+    margin:0 auto;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+}
+h1{
+    font-size: 45px;
+}
+p{
+    font-size: 16px;
+}
+#description{
+    width:50%;
+    float: left;
+    
+
+}
+#form-con{
+    width: 50%;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+#heading{
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.2);;
+    width: 100%;
+    padding: 15px;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 15px;
+    
+
+}
+.form{
+    border-radius: 10px;
+    background-color: white;
+     text-align: center;
+     width:100%;
+     margin:10px;
+     padding:20px;
+}
+.input_contain{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.fa{
+    position: absolute;
+    top: 35px;
+    right: 60px;
+}
+input.ng-invalid.ng-touched{
+    border:1px solid red;
+}
+
+input.ng-valid{
+    border:1px solid grey;
+}
+.error{
+    color: red;
+    font-weight: bold;
+    width:100%;
+    font-size: small;
+    margin-right: 50px;
+    text-align: right;
+}
+.validate{
+    width: 80%;
+    padding: 15px;
+    margin: 15px;
+    /* border: none; */
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.validate:focus {
+    outline: none !important;
+    border:1px solid grey;
+    box-shadow: 0 0 10px #719ECE;
+    font-weight: 400;
+}
+
+button{
+    width: 80%;
+    padding: 18px;
+    margin: 5px;
+    background-color: hsl(154, 59%, 51%);
+    border-radius: 10px;
+    color:white;
+    border:none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+@media only screen and (max-width: 600px) {
+    main{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        flex-wrap: wrap;
+        min-height:800px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    
+    }
+    h1{
+        font-size: 30px;
+    }
+    p{
+        font-size: 14px;
+    }
+    #description{
+        width:100%;
+        margin:0 auto;
+        
+    }
+    #form-con{
+        width:100%;
+        margin-top: 0;
+        padding:40px;
+    }
+
+   
+}
